@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Sidebar from "./Components/Sidebar";
+import Topbar from "./Components/TopBar";
+import Dashboard from "./Pages/Dashboard";
+import Products from "./Pages/Products";
+
+function PageContent({ active }) {
+  switch (active) {
+    case "Dashboard": return <Dashboard />;
+    case "Products":  return <Products />;
+    default:
+      return (
+        <main className="main">
+          <h1 className="page-title">{active}</h1>
+          <p style={{ color: "#202020", fontSize: 14 }}>Bu sayfa henüz yapım aşamasında.</p>
+        </main>
+      );
+  }
+}
 
 function App() {
+  const [active, setActive] = useState("Dashboard");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="app">
+      <Sidebar active={active} setActive={setActive} />
+      <div className="main-wrap">
+        <Topbar />
+        <PageContent active={active} />
+      </div>
     </div>
   );
 }
