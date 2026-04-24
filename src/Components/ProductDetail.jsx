@@ -11,7 +11,7 @@ export default function ProductDetail() {
     return (
       <main className="main">
         <p>Ürün bulunamadı.</p>
-        <button onClick={() => navigate("/products")}>Geri Dön</button>
+        <button onClick={() => navigate("/Products.jsx")}>Geri Dön</button>
       </main>
     );
   }
@@ -19,7 +19,7 @@ export default function ProductDetail() {
   return (
     <main className="main">
 
-      <button className="detail__back" onClick={() => navigate("/products")}>
+      <button className="detail__back" onClick={() => navigate("/Products.jsx")}>
         ← Ürünlere Dön
       </button>
 
