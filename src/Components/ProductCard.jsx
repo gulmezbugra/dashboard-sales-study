@@ -20,7 +20,7 @@ function ProductCard({ name, price, image, rating = 4 }) {
   const navigate = useNavigate();
 
   return (
-    <div className="product-card" onClick={() => navigate(`/products/${id}`)} style={{ cursor: "pointer" }}>
+    <div className="product-card" onClick={() => navigate(`../Pages/Products.jsx/${id}`)} style={{ cursor: "pointer" }}>
       <div className="product-card__img-wrap">
         <button className="product-card__arrow product-card__arrow--left">&#8249;</button>
         <div className="product-card__img">
