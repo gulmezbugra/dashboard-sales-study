@@ -72,3 +72,36 @@ export const DEALS = [
 ];
 
 export const SALES_DATA = [22, 31, 27, 64, 34, 42, 39, 95, 47, 68, 58, 72, 63, 55, 61, 57, 65, 60, 58, 64, 62, 67, 63, 70];
+
+export const PRODUCTS = [
+  {
+    id: 1,
+    name: "Apple Watch Series 4",
+    price: 120.00,
+    rating: 4,
+    emoji:"⌚",
+    category : "Wearable",
+    stock: 43,
+    description:"Apple Watch Series 4 (44 mm) Gümüş Rengi Alüminyum Kasa ve Beyaz Spor Kordon Akıllı Saat"
+  },
+  {
+    id: 2,
+    name: "MacBook Pro 14\"",
+    price: 1329.99,
+    rating: 5,
+    emoji: "💻",
+    category: "Laptop",
+    stock: 12,
+    description: "Apple MacBook Pro M4 16GB 512GB SSD macOS 14 inç Taşınabilir Bilgisayar Uzay Siyahı MW2U3TUA",
+  },
+  {
+    id: 3,
+    name: "iPhone 15",
+    price: 629.99,
+    rating: 5,
+    emoji: "📱",
+    category: "Phone",
+    stock: 78,
+    description: "iPhone 15 Pro, titanium kasası ve Pro kamera sistemiyle fotoğrafçılığı yeniden tanımlar.",
+  },
+];
